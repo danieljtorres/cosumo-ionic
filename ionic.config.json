@@ -1,0 +1,7 @@
+{
+  "name": "cosumo-ionic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

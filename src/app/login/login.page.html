@@ -1,0 +1,32 @@
+<ion-content>
+  <div class="ion-padding">
+    <form #form="ngForm" (ngSubmit)="login(form)">
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="10" offset-xs="1" align-self-center>
+            <ion-text color="primary">
+                <h1 style="color: #1077BE;">ACTIVAR CUENTA</h1>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="10" offset-xs="1" align-self-center class="ion-justify-content-center">
+            <ion-text><h5>ID</h5></ion-text>
+            <ion-input name="internal_id" type="text" ngModel id="id" autofocus required></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="10" offset-xs="1" align-self-center class="ion-justify-content-center">
+              <ion-text><h5>PASSWORD</h5></ion-text>
+              <ion-input name="password" type="password" ngModel id="password" required></ion-input>
+            </ion-col>
+          </ion-row>
+        <ion-row>
+          <ion-col size="10" offset-xs="1" align-self-center>
+            <ion-button type="submit" expand="block" [disabled]="form.invalid" size="large" fill="clear">ACTIVAR CUENTA</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </div>
+</ion-content>

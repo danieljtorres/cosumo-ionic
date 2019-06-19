@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon [routerLink]="['/logout']" slot="icon-only" name="power"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col align-self-center>
+          <ion-text color="primary">
+            <h1 class="ion-text-center" style="color: #1077BE;">SU CUENTA EXPIRA EN:</h1>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="8" offset-xs="2" align-self-center class="ion-no-padding">
+          <div class="round-label-wrapper ion-align-items-center" style="position: absolute; width: 100%; height: 100%; display: flex; justify-content: center">
+            <div class="ion-text-center">
+              <ion-text color="primary">
+                <h1 class="days">{{ daysForExpiration }} </h1>
+                <p class="days-text">DIAS</p>
+              </ion-text>
+            </div>
+          </div>
+          <round-progress
+            [current]="current"
+            [max]="100"
+            [color]="'#1077BE'"
+            [background]="'#9FC9E3'"
+          >
+          </round-progress>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col align-self-center>
+          <ion-text>
+            <h4 class="ion-text-center" style="color: #1077BE;">El dia {{ endDate }}</h4>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col align-self-center>
+          <div class="separator"></div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col align-self-center>
+          <ion-text>
+            <p class="ion-text-center">ACTIVACION CONTRATO: {{ startDate }}</p>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col align-self-center>
+          <ion-text>
+            <p class="ion-text-center">Contacte con su vendedor para renovar el servicio. <br> El servicio deberia renovarse antes de la <br> fecha de expiración del mismo</p>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
