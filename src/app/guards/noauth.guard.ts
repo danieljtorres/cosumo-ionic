@@ -15,6 +15,7 @@ export class NoauthGuard implements CanActivate {
       return new Promise((resolve, reject) => {
         this.mainService.isLoggedIn().subscribe((res) => {
           if(res) {
+            this.router.navigate(['/home']);
             resolve(false);
           } else {
             resolve(true);

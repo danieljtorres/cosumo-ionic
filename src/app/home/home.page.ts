@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit, OnDestroy {
+export class HomePage {
 
   daysForExpiration = 0
   current = 0
@@ -19,7 +19,7 @@ export class HomePage implements OnInit, OnDestroy {
 
   constructor(public loadingController: LoadingController, private mainService: MainService) {}
 
-  ngOnInit() {
+  ionViewWillEnter () {
     this.getData()
   }
 
@@ -50,8 +50,7 @@ export class HomePage implements OnInit, OnDestroy {
     console.log('Loading dismissed!');
   }
 
-  ngOnDestroy(): void {
+  ionViewWillLeave() {
     this.getDataObs.unsubscribe()
   }
-
 }

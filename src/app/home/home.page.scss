@@ -6,10 +6,14 @@
 
 h1.days {
   font-size: 70px;
-  color: #1077BE
+  color: #1077BE;
+  line-height: 38px;
+  text-align: center;
 }
 
-p.days-text {
-  font-size: 40px;
+.days-text {
+  font-size: 25px !important;
+  font-weight: normal !important;
   color: #1077BE;
+  text-align: center;
 }

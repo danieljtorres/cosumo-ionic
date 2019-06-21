@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  SERVER_ADDRESS: 'http://servicetime.idnapps.com/api/v1'
+  SERVER_ADDRESS: 'https://servicetime.idnapps.com/api/v1'
 };
 
 /*

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  SERVER_ADDRESS: 'http://servicetime.idnapps.com/api/v1'
+  SERVER_ADDRESS: 'https://servicetime.idnapps.com/api/v1'
 };

@@ -53,6 +53,7 @@ export class MainService {
   checkToken() {
     this.storage.get("ACCESS_TOKEN").then(res => {
       if (res) {
+        console.log('Token ready')
         this.authSubject.next(true);
         this.TOKEN = res
       }
