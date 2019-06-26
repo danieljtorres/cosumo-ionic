@@ -20,16 +20,16 @@
         <ion-col size="8" offset-xs="2" align-self-center class="ion-no-padding">
           <div class="round-label-wrapper ion-align-items-center" style="position: absolute; width: 100%; height: 100%; display: flex; justify-content: center">
             <div class="ion-text-center">
-              <ion-text color="primary">
-                <h1 class="days">{{ daysForExpiration }}<br><span class="days-text">DIAS</span></h1>
+              <ion-text>
+                <h1 class="days" [style.color]="color">{{ daysForExpiration }}<br><span class="days-text" [style.color]="color">DIAS</span></h1>
               </ion-text>
             </div>
           </div>
           <round-progress
             [current]="current"
             [max]="100"
-            [color]="'#1077BE'"
-            [background]="'#9FC9E3'"
+            [color]="color"
+            [background]="background"
           >
           </round-progress>
         </ion-col>
@@ -37,7 +37,7 @@
       <ion-row>
         <ion-col align-self-center>
           <ion-text>
-            <h4 class="ion-text-center" style="color: #1077BE;">El dia {{ endDate }}</h4>
+            <h4 class="ion-text-center" style="color: #1077BE;">{{ current > 0 ? 'El dia ' + endDate : 'Su cuenta ha expirado' }}</h4>
           </ion-text>
         </ion-col>
       </ion-row>
